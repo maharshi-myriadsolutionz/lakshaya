@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lakshya Sports Academy - Premier Tennis Coaching in Ahmedabad</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        // Custom Tailwind theme to incorporate brand colors from the logo
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                'brand-blue': '#4A90E2',
+                'brand-green': '#7ED321',
+                'brand-yellow': '#F5A623',
+              }
+            }
+          }
+        }
+    </script>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        body {
+            font-family: 'Roboto', sans-serif;
+            font-weight: 300;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        h1, h2, h3, h4, h5, h6, .font-heading {
+            font-family: 'Bebas Neue', sans-serif;
+            letter-spacing: 1.5px;
+        }
+        .sharp-button {
+            border-radius: 0;
+        }
+        .gradient-text {
+            background: linear-gradient(to right, #4A90E2, #7ED321);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .hero-bg-text {
+            /* Optimized for mobile */
+            font-size: clamp(4rem, 20vw, 16rem);
+        }
+        .hero-word {
+            transition: color 0.5s ease-in-out;
+        }
+        .hero-word.highlighted {
+            color: #7ED321; /* brand-green */
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800">
+
+    <!-- Header -->
+    <header class="bg-white/90 backdrop-blur-lg sticky top-0 z-50 border-b border-slate-200/80">
+        <div class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <a href="#home" class="flex items-center space-x-3">
+                 <!-- Placeholder for PNG logo -->
+                 <img src="logo.png" alt="Lakshya Sports Academy Logo" class="h-9 w-9 object-contain">
+                <h1 class="text-3xl tracking-wider text-slate-900">LAKSHYA</h1>
+            </a>
+            <nav class="hidden md:flex space-x-10">
+                <a href="#about" class="text-slate-600 tracking-widest text-sm hover:text-brand-blue transition-colors duration-300">ABOUT</a>
+                <a href="#programs" class="text-slate-600 tracking-widest text-sm hover:text-brand-blue transition-colors duration-300">PROGRAMS</a>
+                <a href="#testimonials" class="text-slate-600 tracking-widest text-sm hover:text-brand-blue transition-colors duration-300">TESTIMONIALS</a>
+                <a href="#coaches" class="text-slate-600 tracking-widest text-sm hover:text-brand-blue transition-colors duration-300">COACHES</a>
+                <a href="#contact" class="text-slate-600 tracking-widest text-sm hover:text-brand-blue transition-colors duration-300">CONTACT</a>
+            </nav>
+            <button id="mobile-menu-button" class="md:hidden text-slate-900">
+                <i data-lucide="menu"></i>
+            </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden px-6 pb-4 bg-white">
+            <a href="#about" class="block py-2 text-slate-700 hover:text-brand-blue">ABOUT</a>
+            <a href="#programs" class="block py-2 text-slate-700 hover:text-brand-blue">PROGRAMS</a>
+            <a href="#testimonials" class="block py-2 text-slate-700 hover:text-brand-blue">TESTIMONIALS</a>
+            <a href="#coaches" class="block py-2 text-slate-700 hover:text-brand-blue">COACHES</a>
+            <a href="#contact" class="block py-2 text-slate-700 hover:text-brand-blue">CONTACT</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="bg-black text-white">
+        <div class="container mx-auto px-6 flex items-center justify-center min-h-screen">
+            <div class="relative text-center w-full">
+                <!-- Background Text -->
+                <span class="absolute inset-0 flex items-center justify-center font-heading text-white/10 hero-bg-text leading-none select-none">DOMINATE</span>
+                
+                <!-- Foreground Text -->
+                <div class="relative">
+                    <h2 class="text-4xl sm:text-5xl md:text-6xl font-heading text-slate-300">
+                        <span class="hero-word">DEDICATION.</span>
+                        <span class="hero-word">DISCIPLINE.</span>
+                        <span class="hero-word">DOMINANCE.</span>
+                    </h2>
+                    <p class="mt-4 text-base sm:text-lg max-w-2xl mx-auto font-light text-slate-300">Ahmedabad's elite tennis academy, forging the champions of tomorrow.</p>
+                    <a href="#programs" class="mt-10 inline-block bg-brand-green hover:bg-opacity-90 text-black font-bold py-3 px-10 sharp-button transition-all duration-300 font-heading text-lg">EXPLORE PROGRAMS</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about" class="py-20 md:py-28 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-2 gap-12 md:gap-20 items-center">
+                <div class="relative">
+                     <img src="lsaimg.jpg" alt="A modern view of the academy facilities" class="w-full z-10 relative">
+                     <div class="absolute top-6 -left-6 md:top-8 md:-left-8 w-full h-full border-2 border-brand-blue z-0"></div>
+                </div>
+                <div>
+                    <h3 class="text-4xl md:text-5xl font-heading mb-6">MORE THAN AN ACADEMY</h3>
+                    <p class="mb-4 text-slate-600 font-light leading-relaxed">Lakshya Sports Academy is a philosophy. We are a community built on the relentless pursuit of excellence. Our mission is to forge champions, not just players. We provide a disciplined, high-performance environment that pushes athletes beyond their limits.</p>
+                    <p class="text-slate-600 font-light leading-relaxed">With a holistic focus on technical skill, tactical intelligence, and mental fortitude, we are the definitive destination for serious tennis talent in Ahmedabad.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Programs Section -->
+    <section id="programs" class="py-20 md:py-28 bg-slate-50">
+        <div class="container mx-auto px-6 text-center">
+            <h3 class="text-4xl md:text-5xl font-heading mb-4">OUR PROGRAMS</h3>
+            <p class="text-slate-500 mb-12 md:mb-16 max-w-2xl mx-auto font-light">STRUCTURED PATHWAYS TO MASTERY. FOR EVERY LEVEL OF AMBITION.</p>
+            <div class="grid md:grid-cols-3 bg-slate-200 gap-px">
+                <!-- Program Card 1 -->
+                <div class="bg-slate-50 p-8 md:p-10 text-left transition-all duration-300 hover:bg-white hover:shadow-2xl group">
+                    <i data-lucide="rocket" class="w-10 h-10 text-brand-blue mb-5 transition-transform duration-300 group-hover:scale-110"></i>
+                    <h4 class="text-2xl font-heading mb-2 text-slate-900">FOUNDATION</h4>
+                    <p class="text-slate-600 font-light group-hover:text-slate-800">Master the fundamentals. Build the technical base for future success in a structured, motivating environment.</p>
+                </div>
+                <!-- Program Card 2 -->
+                <div class="bg-slate-50 p-8 md:p-10 text-left transition-all duration-300 hover:bg-white hover:shadow-2xl group">
+                    <i data-lucide="bar-chart-2" class="w-10 h-10 text-brand-blue mb-5 transition-transform duration-300 group-hover:scale-110"></i>
+                    <h4 class="text-2xl font-heading mb-2 text-slate-900">DEVELOPMENT</h4>
+                    <p class="text-slate-600 font-light group-hover:text-slate-800">Refine technique, enhance consistency, and integrate tactical play through intensive drills and match simulation.</p>
+                </div>
+                <!-- Program Card 3 -->
+                <div class="bg-slate-50 p-8 md:p-10 text-left transition-all duration-300 hover:bg-white hover:shadow-2xl group">
+                    <i data-lucide="trophy" class="w-10 h-10 text-brand-blue mb-5 transition-transform duration-300 group-hover:scale-110"></i>
+                    <h4 class="text-2xl font-heading mb-2 text-slate-900">PERFORMANCE</h4>
+                    <p class="text-slate-600 font-light group-hover:text-slate-800">For the competitive player. A demanding program focused on tournament preparation, mental conditioning, and peak performance.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-20 md:py-28 bg-white">
+        <div class="container mx-auto px-6 text-center">
+            <h3 class="text-4xl md:text-5xl font-heading mb-4">WHAT OUR PLAYERS SAY</h3>
+            <p class="text-slate-500 mb-12 md:mb-16 max-w-2xl mx-auto font-light">STORIES OF GROWTH AND SUCCESS FROM THE LAKSHYA FAMILY.</p>
+            <div class="grid md:grid-cols-2 gap-8 text-left">
+                <div class="bg-slate-50 p-8">
+                    <p class="text-slate-600 font-light mb-6">"The coaching at Lakshya is second to none. The personal attention and focus on technical detail have completely transformed my game. I'm stronger, faster, and more confident on the court than ever before."</p>
+                    <div class="flex items-center">
+                        <img src="https://placehold.co/50x50/e5e7eb/111827?text=A" alt="Athlete" class="rounded-full mr-4">
+                        <div>
+                            <h4 class="font-bold text-slate-800">Player Name</h4>
+                            <p class="text-sm text-brand-blue">Performance Program</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-slate-50 p-8">
+                    <p class="text-slate-600 font-light mb-6">"My daughter started in the Foundation program and her passion for tennis has skyrocketed. The coaches make it fun while still being disciplined. It's a fantastic environment for young players to grow."</p>
+                     <div class="flex items-center">
+                        <img src="https://placehold.co/50x50/e5e7eb/111827?text=P" alt="Parent" class="rounded-full mr-4">
+                        <div>
+                            <h4 class="font-bold text-slate-800">Player name</h4>
+                            <p class="text-sm text-brand-blue">Parent</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Coaches Section -->
+    <section id="coaches" class="py-20 md:py-28 bg-slate-50">
+        <div class="container mx-auto px-6 text-center">
+            <h3 class="text-4xl md:text-5xl font-heading mb-4">THE MENTORS</h3>
+            <p class="text-slate-500 mb-12 md:mb-16 max-w-2xl mx-auto font-light">GUIDANCE FROM THOSE WHO HAVE MASTERED THE GAME.</p>
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Coach 1 -->
+                <div class="text-center group">
+                    <div class="overflow-hidden">
+                        <img src="coach.jpeg" class="w-full mx-auto grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-500" alt="Head Coach">
+                    </div>
+                    <h4 class="text-2xl font-heading mt-6">RIPUDAMAN CHAUHAN</h4>
+                    <p class="text-brand-blue font-semibold tracking-widest text-xs">HEAD COACH & DIRECTOR</p>
+                </div>
+                <!-- Coach 2 -->
+                <div class="text-center group">
+                    <div class="overflow-hidden">
+                        <img src="coach.jpeg" class="w-full mx-auto grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-500" alt="Senior Coach">
+                    </div>
+                    <h4 class="text-2xl font-heading mt-6">SENIOR COACH</h4>
+                    <p class="text-brand-blue font-semibold tracking-widest text-xs">PERFORMANCE SPECIALIST</p>
+                </div>
+                <!-- Coach 3 -->
+                <div class="text-center group">
+                    <div class="overflow-hidden">
+                        <img src="coach.jpeg" class="w-full mx-auto grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-500" alt="Junior Coach">
+                    </div>
+                    <h4 class="text-2xl font-heading mt-6">JUNIOR COACH</h4>
+                    <p class="text-brand-blue font-semibold tracking-widest text-xs">YOUTH DEVELOPMENT</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 md:py-28 bg-slate-900 text-white">
+        <div class="container mx-auto px-6">
+             <div class="text-center">
+                 <h3 class="text-4xl md:text-5xl font-heading gradient-text">START YOUR JOURNEY</h3>
+                 <p class="text-slate-400 mt-2 mb-12 md:mb-16 font-light">CONTACT US FOR ENROLLMENT AND ENQUIRIES.</p>
+            </div>
+            <div class="grid md:grid-cols-2 gap-16 items-center">
+                <div class="space-y-8">
+                    <div class="flex items-start">
+                        <i data-lucide="map-pin" class="w-5 h-5 mr-5 text-brand-green mt-1 flex-shrink-0"></i>
+                        <div>
+                            <h4 class="font-semibold tracking-widest text-sm text-slate-300">ADDRESS</h4>
+                            <p class="text-slate-400 font-light">Opp. Aakruti Elegance, nr. Godrej Garden City Rd, Jagatpur, Ahmedabad, Gujarat 382470</p>
+                        </div>
+                    </div>
+                     <div class="flex items-start">
+                        <i data-lucide="phone" class="w-5 h-5 mr-5 text-brand-green mt-1 flex-shrink-0"></i>
+                        <div>
+                            <h4 class="font-semibold tracking-widest text-sm text-slate-300">PHONE</h4>
+                            <p class="text-slate-400 font-light">+91 98252 60625 / +91 90282 57534</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start">
+                        <i data-lucide="mail" class="w-5 h-5 mr-5 text-brand-green mt-1 flex-shrink-0"></i>
+                        <div>
+                            <h4 class="font-semibold tracking-widest text-sm text-slate-300">EMAIL</h4>
+                            <p class="text-slate-400 font-light">lakshyatennisacademy@gmail.com</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="hidden md:flex items-center justify-center">
+                     <img src="logo.png" alt="Lakshya Sports Academy Logo" class="w-40 h-40 object-contain opacity-20">
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-slate-500 py-6 border-t border-slate-800">
+        <div class="container mx-auto px-6 text-center text-xs font-light">
+            <p>&copy; 2024 LAKSHYA SPORTS ACADEMY. ALL RIGHTS RESERVED.</p>
+        </div>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when a link is clicked
+        const mobileMenuLinks = mobileMenu.querySelectorAll('#mobile-menu a');
+        mobileMenuLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Hero headline animation
+        document.addEventListener('DOMContentLoaded', () => {
+            const words = document.querySelectorAll('.hero-word');
+            let currentWordIndex = 0;
+
+            if (words.length > 0) {
+                // Initial highlight
+                words[0].classList.add('highlighted');
+
+                setInterval(() => {
+                    words[currentWordIndex].classList.remove('highlighted');
+                    currentWordIndex = (currentWordIndex + 1) % words.length;
+                    words[currentWordIndex].classList.add('highlighted');
+                }, 3000);
+            }
+        });
+    </script>
+</body>
+</html>
+
